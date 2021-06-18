@@ -10,6 +10,7 @@ const Title = () => {
   const [state, dispatch] = useReducer(titleReducer, initialState);
 
   const handleToggleEditing = () => {
+    console.log("Calling handleToggleEditing");
     dispatch(toggleEditing());
   }
 
