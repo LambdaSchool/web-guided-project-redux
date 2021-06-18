@@ -31,11 +31,10 @@ const Title = (props) => {
   );
 };
 
-// Step 3: connect components to the Redux store (HOC pattern, "enhancing" the Title component with the ability to read from and update the Redux store)
-export default connect(mapStateToProps)(Title)
 
 // mapStateToProps to read state
 const mapStateToProps = (state) => {
+  console.log("state tree:", state);
   return {
     appName: state.appName,
     editing: state.editing,
@@ -46,3 +45,7 @@ const mapStateToProps = (state) => {
 // mapDispatchToProps to update state
 
 // connect(mapStateToProps, mapDispatchToProps)(Title)
+
+
+// Step 3: connect components to the Redux store (HOC pattern, "enhancing" the Title component with the ability to read from and update the Redux store)
+export default connect(mapStateToProps)(Title)
