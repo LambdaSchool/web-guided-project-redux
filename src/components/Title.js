@@ -11,7 +11,6 @@ const Title = () => {
 
   // dipatching functions:
   const handleToggleEditing = () => {
-    console.log("Calling handleToggleEditing");
     dispatch(toggleEditing());
   }
 
