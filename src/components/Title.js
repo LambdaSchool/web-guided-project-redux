@@ -1,6 +1,5 @@
 import React, { useReducer } from 'react';
 import { connect } from 'react-redux';
-
 import { initialState, titleReducer } from '../reducers/titleReducer';
 import { toggleEditing, updateTitle} from './../actions/titleActions';
 
@@ -24,7 +23,6 @@ const Title = (props) => {
 
 // mapStateToProps to read state
 const mapStateToProps = (state) => {
-  console.log("state tree:", state);
   return {
     appName: state.appName,
     editing: state.editing,
