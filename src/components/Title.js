@@ -9,6 +9,7 @@ import TitleForm from './TitleForm';
 const Title = () => {
   const [state, dispatch] = useReducer(titleReducer, initialState);
 
+  // dipatching functions:
   const handleToggleEditing = () => {
     console.log("Calling handleToggleEditing");
     dispatch(toggleEditing());
