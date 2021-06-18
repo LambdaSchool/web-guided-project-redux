@@ -1,4 +1,6 @@
 import { combineReducers } from "redux";
+import { titleReducer } from "./titleReducer";
+import { dragonListReducer } from "./dragonListReducer";
 
 // keys are the name we'll use to branch the state tree
 // for example: state.dragonList.members or state.appConfig.title

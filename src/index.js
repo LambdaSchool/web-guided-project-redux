@@ -4,12 +4,12 @@ import { createStore } from 'redux';
 import { Provider } from "react-redux";
 
 import Title from './components/Title';
-import { titleReducer } from './reducers/titleReducer';
 import './styles.css';
 import DragonList from './components/DragonList';
+import { rootReducer } from './reducers';
 
 // Step 1: create the store
-const store = createStore(titleReducer);
+const store = createStore(rootReducer);
 
 function App() {
   return (
