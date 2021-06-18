@@ -1,11 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const TitleDisplay = (props)=> {
     return(<h2>
         {props.title}{' '}
         <i
           className="far fa-edit"
-          onClick={props.handleToggleEditing}
+          onClick={props.toggleEditing}
         />
     </h2>);
 }
@@ -26,7 +27,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     toggleEditing: () => dispatch(toggleEditing()),
-    updateTitle: (title) => dispatch(updateTitle(title))
   }
 }
 
