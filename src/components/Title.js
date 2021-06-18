@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import { connect } from 'react-redux';
 
 import { initialState, titleReducer } from '../reducers/titleReducer';
 import { toggleEditing, updateTitle} from './../actions/titleActions';
@@ -6,7 +7,7 @@ import { toggleEditing, updateTitle} from './../actions/titleActions';
 import TitleDisplay from './TitleDisplay';
 import TitleForm from './TitleForm';
 
-const Title = () => {
+const Title = (props) => {
   const [state, dispatch] = useReducer(titleReducer, initialState);
 
   // dipatching functions:
@@ -20,10 +21,10 @@ const Title = () => {
 
   return (
     <div>
-      <h1>{state.appName}</h1>
+      <h1>{props.appName}</h1>
       {
-        !state.editing ? 
-          <TitleDisplay title={state.title} handleToggleEditing={handleToggleEditing}/>: 
+        !props.editing ? 
+          <TitleDisplay title={props.title} handleToggleEditing={handleToggleEditing}/>: 
           <TitleForm handleTitleUpdate={handleTitleUpdate}/>
       }
     </div>
