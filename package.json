@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "redux": "^4.1.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
