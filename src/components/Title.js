@@ -12,7 +12,7 @@ const Title = (props) => {
       <h1>{props.appName}</h1>
       {
         !props.editing ? 
-          <TitleDisplay title={props.title} handleToggleEditing={handleToggleEditing}/>: 
+          <TitleDisplay title={props.title} handleToggleEditing={props.toggleEditing}/>: 
           <TitleForm handleTitleUpdate={handleTitleUpdate}/>
       }
     </div>
@@ -34,7 +34,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     toggleEditing: () => dispatch(toggleEditing()),
-    updateTitle = (title) => dispatch(updateTitle(title))
+    updateTitle: (title) => dispatch(updateTitle(title))
   }
 }
 
