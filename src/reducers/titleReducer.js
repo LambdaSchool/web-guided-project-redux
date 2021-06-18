@@ -15,6 +15,7 @@ const titleReducer = (state, action) => {
         editing: false
       };
     case TOGGLE_EDITING:
+      console.log("Toggle editing case in the titleReducer");
       return {
         ...state,
         editing: !state.editing
