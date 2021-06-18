@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
+import { Provider } from "react-redux";
 
 import Title from './components/Title';
 import { titleReducer } from './reducers/titleReducer';
@@ -20,4 +21,4 @@ function App() {
 const rootElement = document.getElementById('root');
 
 // Step 2: Provide the store
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Provider store={store}><App /></Provider>, rootElement);
