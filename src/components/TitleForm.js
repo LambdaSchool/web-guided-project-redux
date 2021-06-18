@@ -8,7 +8,7 @@ const TitleForm = (props) => {
     };
 
     const handleSubmit = ()=> {
-        props.handleTitleUpdate(newTitleText);
+        props.updateTitle(newTitleText);
     }
     
     return(<div>
@@ -41,7 +41,6 @@ const mapStateToProps = (state) => {
 // mapDispatchToProps to update state
 const mapDispatchToProps = (dispatch) => {
   return {
-    toggleEditing: () => dispatch(toggleEditing()),
     updateTitle: (title) => dispatch(updateTitle(title))
   }
 }
