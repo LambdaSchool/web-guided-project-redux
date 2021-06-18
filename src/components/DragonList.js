@@ -1,14 +1,9 @@
 import React from 'react';
+import { addMember } from '../actions/dragonListActions';
 import DragonMember from './DragonMember';
 
 class DragonList extends React.Component {
-  state = {
-    newMember: '',
-    members: [
-      { name: 'Jojo Zhang', dragonStatus: true },
-      { name: 'Brandon Harris', dragonStatus: false }
-    ]
-  };
+  const[newMember, setNewMember] = useState('');
 
   handleChanges = e => {
     this.setState({ ...this.state, newMember: e.target.value });
@@ -44,6 +39,12 @@ class DragonList extends React.Component {
 const mapStateToProps = (state) => {
   return {
     members: state.dragonList.members
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addMember: (memberName) => dispatch(addMember(memberName))
   }
 }
 
