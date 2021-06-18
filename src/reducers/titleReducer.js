@@ -6,7 +6,8 @@ export const initialState = {
     editing: false
   };
   
-export const titleReducer = (state, action) => {
+// With redux, we have to initialize here rather than in a useReducer call:
+export const titleReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_TITLE:
       return {
