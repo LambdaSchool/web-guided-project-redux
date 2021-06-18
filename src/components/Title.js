@@ -13,7 +13,7 @@ const Title = (props) => {
       {
         !props.editing ? 
           <TitleDisplay title={props.title} handleToggleEditing={props.toggleEditing}/>: 
-          <TitleForm handleTitleUpdate={handleTitleUpdate}/>
+          <TitleForm handleTitleUpdate={props.updateTitle}/>
       }
     </div>
   );
@@ -38,8 +38,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-// connect(mapStateToProps, mapDispatchToProps)(Title)
-
-
 // Step 3: connect components to the Redux store (HOC pattern, "enhancing" the Title component with the ability to read from and update the Redux store)
-export default connect(mapStateToProps)(Title)
+export default connect(mapStateToProps, mapDispatchToProps)(Title)
