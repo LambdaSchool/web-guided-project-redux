@@ -14,7 +14,7 @@ class DragonList extends React.Component {
     this.setState({ ...this.state, newMember: e.target.value });
   };
 
-  handleClick = ()=> {
+  handleClick = () => {
     this.setState({
       ...this.state,
       members: [...this.members, {name: newMember, dragonStatus: true}]
@@ -35,7 +35,7 @@ class DragonList extends React.Component {
           onChange={this.handleChanges}
           placeholder="Add new member"
         />
-        <button onClick={handleClick}>Add member</button>
+        <button onClick={this.handleClick}>Add member</button>
       </div>
     );
   }
