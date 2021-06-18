@@ -50,4 +50,6 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DragonList);
+const HOC = connect(mapStateToProps, mapDispatchToProps)
+
+export default HOC(DragonList);
