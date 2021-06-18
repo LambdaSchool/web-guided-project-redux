@@ -17,8 +17,6 @@ const TitleDisplay = (props)=> {
 // mapStateToProps to read state
 const mapStateToProps = (state) => {
   return {
-    appName: state.appName,
-    editing: state.editing,
     title: state.title
   }
 }
