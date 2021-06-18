@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { updateTitle } from '../actions/titleActions';
 
 const TitleForm = (props) => {
     const [newTitleText, setNewTitleText] = useState();
@@ -31,11 +32,7 @@ const TitleForm = (props) => {
 
 // mapStateToProps to read state
 const mapStateToProps = (state) => {
-  return {
-    appName: state.appName,
-    editing: state.editing,
-    title: state.title
-  }
+  return {}
 }
 
 // mapDispatchToProps to update state
