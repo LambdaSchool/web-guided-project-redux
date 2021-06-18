@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
 
 import { initialState, titleReducer } from '../reducers/titleReducer';
 import { toggleEditing, updateTitle} from './../actions/titleActions';
