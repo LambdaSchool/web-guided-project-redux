@@ -25,16 +25,9 @@ const Title = (props) => {
 const mapStateToProps = (state) => {
   return {
     appName: state.appName,
-  }
-}
-
-// mapDispatchToProps to update state
-const mapDispatchToProps = (dispatch) => {
-  return {
-    toggleEditing: () => dispatch(toggleEditing()),
-    updateTitle: (title) => dispatch(updateTitle(title))
+    editing: state.editing
   }
 }
 
 // Step 3: connect components to the Redux store (HOC pattern, "enhancing" the Title component with the ability to read from and update the Redux store)
-export default connect(mapStateToProps, mapDispatchToProps)(Title)
+export default connect(mapStateToProps)(Title)
