@@ -35,6 +35,13 @@ export default Title;
 // Step 3: connect components to the Redux store
 
 // mapStateToProps to read state
+const mapStateToProps = (state) => {
+  return {
+    appName: state.appName,
+    editing: state.editing,
+    title: state.title
+  }
+}
 
 // mapDispatchToProps to update state
 
