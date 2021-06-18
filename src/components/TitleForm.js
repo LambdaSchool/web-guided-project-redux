@@ -31,11 +31,6 @@ const TitleForm = (props) => {
 
 // Mapping functions for react-redux connect:
 
-// mapStateToProps to read state
-const mapStateToProps = (state) => {
-  return {}
-}
-
 // mapDispatchToProps to update state
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -44,4 +39,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 // Step 3: connect components to the Redux store (HOC pattern, "enhancing" the Title component with the ability to read from and update the Redux store)
-export default connect(mapStateToProps mapDispatchToProps)(TitleForm);
+export default connect(null, mapDispatchToProps)(TitleForm);
