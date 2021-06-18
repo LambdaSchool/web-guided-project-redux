@@ -31,7 +31,6 @@ const Title = (props) => {
   );
 };
 
-
 // mapStateToProps to read state
 const mapStateToProps = (state) => {
   console.log("state tree:", state);

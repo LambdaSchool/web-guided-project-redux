@@ -1,7 +1,7 @@
 import { TOGGLE_EDITING, UPDATE_TITLE } from "../actions/titleActions";
 
 export const initialState = {
-    appName: "Redux Test",
+    appName: "WEBPT28 Redux Party",
     title: "Dragon Member List 🐲",
     editing: false
   };
