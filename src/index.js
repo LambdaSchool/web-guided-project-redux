@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import Title from './components/Title';
 import { titleReducer } from './reducers/titleReducer';
 import './styles.css';
+import DragonList from './components/DragonList';
 
 // Step 1: create the store
 const store = createStore(titleReducer);
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Title />
+      <DragonList />
     </div>
   );
 }
