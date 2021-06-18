@@ -32,3 +32,5 @@ const Title = () => {
 };
 
 export default Title;
+
+// Step 3: connect components to the Redux store
