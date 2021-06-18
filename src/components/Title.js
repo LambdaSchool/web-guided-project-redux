@@ -33,12 +33,8 @@ const mapStateToProps = (state) => {
 // mapDispatchToProps to update state
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleToggleEditing = () => {
-      dispatch(toggleEditing());,
-
-      handleTitleUpdate = (title) => {
-        dispatch(updateTitle(title));
-
+    toggleEditing: () => dispatch(toggleEditing()),
+    updateTitle = (title) => dispatch(updateTitle(title))
   }
 }
 
