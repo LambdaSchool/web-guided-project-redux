@@ -3,7 +3,9 @@ import { addMember } from '../actions/dragonListActions';
 import DragonMember from './DragonMember';
 
 class DragonList extends React.Component {
-  const[newMember, setNewMember] = useState('');
+  state = {
+    newMember: '',
+  };
 
   handleChanges = e => {
     this.setState({ ...this.state, newMember: e.target.value });
@@ -20,7 +22,7 @@ class DragonList extends React.Component {
     return (
       <div>
         <div className="friends-list">
-          {this.state.members.map((member, index) => (
+          {props.members.map((member, index) => (
             <DragonMember key={index} member={member}/>
           ))}
         </div>
@@ -48,4 +50,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default DragonList;
+export default connect(mapStateToProps, mapDispatchToProps)(DragonList);
