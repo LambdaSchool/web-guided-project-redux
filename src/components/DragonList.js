@@ -41,4 +41,10 @@ class DragonList extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    members: state.dragonList.members
+  }
+}
+
 export default DragonList;
