@@ -18,7 +18,7 @@ const TitleDisplay = (props)=> {
 // mapStateToProps to read state
 const mapStateToProps = (state) => {
   return {
-    title: state.title
+    title: state.appConfig.title
   }
 }
 

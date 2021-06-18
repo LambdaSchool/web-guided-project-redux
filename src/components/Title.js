@@ -24,8 +24,8 @@ const Title = (props) => {
 // mapStateToProps to read state
 const mapStateToProps = (state) => {
   return {
-    appName: state.appName,
-    editing: state.editing
+    appName: state.appConfig.appName,
+    editing: state.appConfig.editing
   }
 }
 
