@@ -8,15 +8,6 @@ import TitleDisplay from './TitleDisplay';
 import TitleForm from './TitleForm';
 
 const Title = (props) => {
-  // dipatching functions:
-  const handleToggleEditing = () => {
-    dispatch(toggleEditing());
-  }
-
-  const handleTitleUpdate = (title) => {
-    dispatch(updateTitle(title));
-  }
-
   return (
     <div>
       <h1>{props.appName}</h1>
@@ -29,6 +20,8 @@ const Title = (props) => {
   );
 };
 
+// Mapping functions for react-redux connect:
+
 // mapStateToProps to read state
 const mapStateToProps = (state) => {
   console.log("state tree:", state);
@@ -40,6 +33,16 @@ const mapStateToProps = (state) => {
 }
 
 // mapDispatchToProps to update state
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handleToggleEditing = () => {
+      dispatch(toggleEditing());,
+
+      handleTitleUpdate = (title) => {
+        dispatch(updateTitle(title));
+
+  }
+}
 
 // connect(mapStateToProps, mapDispatchToProps)(Title)
 
