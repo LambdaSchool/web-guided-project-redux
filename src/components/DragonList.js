@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { addMember } from '../actions/dragonListActions';
 import DragonMember from './DragonMember';
 
@@ -19,7 +20,7 @@ class DragonList extends React.Component {
     return (
       <div>
         <div className="friends-list">
-          {props.members.map((member, index) => (
+          {this.props.members.map((member, index) => (
             <DragonMember key={index} member={member}/>
           ))}
         </div>
@@ -29,7 +30,7 @@ class DragonList extends React.Component {
           onChange={this.handleChanges}
           placeholder="Add new member"
         />
-        <button onClick={() => handleClick()}>Add member</button>
+        <button onClick={() => this.props.addMember(this.state.newMember)}>Add member</button>
       </div>
     );
   }
