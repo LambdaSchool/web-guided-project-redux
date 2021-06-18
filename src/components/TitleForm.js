@@ -44,4 +44,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 // Step 3: connect components to the Redux store (HOC pattern, "enhancing" the Title component with the ability to read from and update the Redux store)
-export default connect(mapStateToProps, mapDispatchToProps)(TitleForm);
+export default connect(mapStateToProps mapDispatchToProps)(TitleForm);
