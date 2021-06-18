@@ -18,4 +18,6 @@ function App() {
 }
 
 const rootElement = document.getElementById('root');
+
+// Step 2: Provide the store
 ReactDOM.render(<App />, rootElement);
